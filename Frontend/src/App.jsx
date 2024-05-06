@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import About from "./Pages/About";
 import Actividades from "./Pages/Actividades";
+import Codisec from "./Pages/Codisec";
 import Home from "./Pages/Home";
 import Inicio from "./Pages/Inicio";
 import Publicaciones from "./Pages/Publicaciones";
@@ -28,6 +29,8 @@ function App() {
             element={<Publicaciones></Publicaciones>}
             path="publicaciones"
           ></Route>
+          {/*  otras rutas */}
+          <Route element={<Codisec></Codisec>} path="codisec"></Route>
         </Route>
       </Routes>
     </Router>

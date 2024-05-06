@@ -21,7 +21,7 @@ function Inicio() {
       <div className="flex items-center justify-center mt-4">
         <div className="grid grid-cols-1">
           <div className="grid grid-cols-1 md:grid-cols-3">
-            <MapLink />
+            <MapLink url="/codisec" />
             <MapLink />
             <MapLink />
           </div>
