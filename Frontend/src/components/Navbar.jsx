@@ -1,17 +1,14 @@
 // Importa los componentes necesarios de las bibliotecas
-import { Link } from 'react-router-dom';
-import PropTypes from "prop-types";
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import PropTypes from "prop-types";
+import { Link, useLocation } from "react-router-dom";
 
 // Define los elementos de navegación
-const navigation = [
-  { name: "Inicio", href: "#", current: true },
-  { name: "Nosotros", href: "#", current: false },
-  { name: "Actividades", href: "#", current: false },
-  { name: "Publicaciones", href: "#", current: false },
-  { name: "Servicios", href: "#", current: false },
-];
+
+const useCurrent = (path) => {
+  return path == useLocation().pathname;
+};
 
 // Función auxiliar para unir clases
 function classNames(...classes) {
@@ -20,6 +17,22 @@ function classNames(...classes) {
 
 // Componente Navbar
 export default function Navbar({ setCurrentNav }) {
+  const navigation = [
+    { name: "Inicio", href: "inicio", current: useCurrent("/inicio") },
+    { name: "Nosotros", href: "nosotros", current: useCurrent("/nosotros") },
+    {
+      name: "Actividades",
+      href: "actividades",
+      current: useCurrent("/actividades"),
+    },
+    {
+      name: "Publicaciones",
+      href: "publicaciones",
+      current: useCurrent("/publicaciones"),
+    },
+    { name: "Servicios", href: "servicios", current: useCurrent("/servicios") },
+  ];
+
   return (
     <div className="container mx-auto">
       <Disclosure as="nav" className="w-full h-full bg-gray-800">

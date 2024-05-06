@@ -1,31 +1,35 @@
-import { useState } from 'react';
-import Navbar from "./components/Navbar.jsx";
-import Contenedor from "./components/Contenedor.jsx";
-import Mapsite from "./components/Mapsite.jsx";
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
-import { BrowserRouter as Router } from 'react-router-dom';
+import {
+  Navigate,
+  Route,
+  BrowserRouter as Router,
+  Routes,
+} from "react-router-dom";
+import About from "./Pages/About";
+import Actividades from "./Pages/Actividades";
+import Home from "./Pages/Home";
+import Inicio from "./Pages/Inicio";
+import Publicaciones from "./Pages/Publicaciones";
+import Services from "./Pages/Services";
 
 function App() {
-  const [currentNav, setCurrentNav] = useState("Inicio");
   return (
     <Router>
-     
-        <div className="grid-header">
-          <Header />
-        </div>
-        <div className="grid-nav">
-          <Navbar currentNav={currentNav} setCurrentNav={setCurrentNav}/>
-        </div>
-        <div className="grid-main">
-          <Contenedor currentNav={currentNav}/>
-        </div>
-        <div className="grid-mapsite">
-          <Mapsite />
-        </div>
-        <div className="grid-footer">
-          <Footer />
-        </div>
+      <Routes>
+        <Route element={<Home></Home>}>
+          <Route element={<Navigate to="inicio" />} path="/"></Route>
+          <Route element={<Inicio></Inicio>} path="inicio"></Route>
+          <Route
+            element={<Actividades></Actividades>}
+            path="actividades"
+          ></Route>
+          <Route element={<Services></Services>} path="servicios"></Route>
+          <Route element={<About></About>} path="nosotros"></Route>
+          <Route
+            element={<Publicaciones></Publicaciones>}
+            path="publicaciones"
+          ></Route>
+        </Route>
+      </Routes>
     </Router>
   );
 }
