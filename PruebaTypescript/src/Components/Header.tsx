@@ -12,7 +12,8 @@ function Header() {
           alt="Logo municipalidad"
         />
       </div>
-      <div className="bg-white p-1">
+
+      <div className="bg-white p-1 ">
         <Image
           className="w-2/3 md:w-1/2 lg:w-1/4"
           radius="none"

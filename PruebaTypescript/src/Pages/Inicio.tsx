@@ -8,6 +8,8 @@ const pages = [
   { path: "/codisec", src: "img/logo-codisec.png", alt: "codisec logo" },
   { path: "/codisec", src: "img/logo-codisec.png", alt: "codisec logo" },
   { path: "/codisec", src: "img/logo-codisec.png", alt: "codisec logo" },
+  { path: "/codisec", src: "img/logo-codisec.png", alt: "codisec logo" },
+  { path: "/codisec", src: "img/logo-codisec.png", alt: "codisec logo" },
 ];
 
 const MapLink = ({
@@ -39,7 +41,7 @@ const MapLink = ({
 
 export default function Inicio() {
   return (
-    <div className="h-full w-full flex flex-wrap py-10 gap-5">
+    <div className="h-full w-full flex flex-wrap py-10 gap-5 justify-center">
       {pages.map((page) => (
         <MapLink
           key={page.path}
