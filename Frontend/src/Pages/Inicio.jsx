@@ -22,13 +22,13 @@ function Inicio() {
         <div className="grid grid-cols-1">
           <div className="grid grid-cols-1 md:grid-cols-3">
             <MapLink url="/codisec" />
-            <MapLink />
-            <MapLink />
+            <MapLink url="/codisec" />
+            <MapLink url="/codisec" />
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <MapLink />
-          <MapLink />
+          <MapLink url="/codisec" />
+          <MapLink url="/codisec" />
         </div>
       </div>
     </div>
